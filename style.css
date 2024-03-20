@@ -1,0 +1,74 @@
+body {
+  font-family: Roboto, sans-serif;
+  background-color: rgb(231 236 247 / 22%);
+}
+input {
+  padding: 15px 20px;
+  border-radius: 6px;
+  border: none;
+}
+h1 {
+  padding-top: 30px;
+  font-size: 45px;
+  font-weight: 800;
+}
+footer {
+  padding: 10px;
+  font-size: 13px;
+  color: rgb(117, 117, 158);
+}
+a {
+  color: rgb(165, 70, 242);
+}
+main {
+  height: 230px;
+}
+.meteo {
+  display: block;
+  max-width: 580px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: aqua;
+  background: url(https://img.freepik.com/premium-photo/blur-background-clouds-sky_49758-694.jpg);
+  background-size: cover;
+  box-shadow: 10px 33px 34px rgba(53, 68, 74, 0.2);
+}
+form .city {
+  width: 450px;
+  font-size: 15px;
+}
+form .search {
+  background-color: rgb(165, 70, 242);
+  color: white;
+  width: 110px;
+  margin-left: 6px;
+  font-size: 16px;
+}
+.temperature {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  top: -120px;*/
+}
+.weather-temp {
+  font-size: 89px;
+  font-weight: 700;
+}
+.cloud {
+  position: relative;
+  top: 10px;
+  font-size: 60px;
+}
+.degree {
+  position: relative;
+  top: 13px;*/
+  font-size: 30px;
+}
+.data {
+  font-weight: 600;
+  color: #e41321;
+}
+.days {
+  color: rgb(13 19 114);
+}

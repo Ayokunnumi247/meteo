@@ -8,21 +8,24 @@
 <body>
     <header>
         <form>
-            <input  type="search" placeholder="Enter a city..." required/>
-            <input   type="submit"  value="Search" required/> 
+            <input  type="search" class= "city"  placeholder="Enter a city..." required/>
+            <input  type="submit" class= "search"  value="Search" required/> 
         </form>
     </header>
     <main>
         <h1>Paris</h1>
-        <p>Monday 14:30, scattered clouds</br>
-        Humidity: 66%, Wind: 3.13Km/h
-        </p> 
-         <p>⛅12°C </p>
+        <p class="days">Monday 14:30, scattered clouds</br>
+        Humidity: <span class="data">66%</span>, Wind: <span class="data">3.13Km/h</span>  </p>
+          <div class="temperature">
+            <span class="cloud">🌥️</span>
+            <span class="weather-temp">12</span>
+            <span class="degree"> °C </span> </div>
     </main>
     <footer>The Project was coded by 
     <a href ="https://github.com/Ayokunnumi247" target="_blank">Ayokunnumi Andu</a> 
     is <a href="#">opened-sourced on GitHub </a> and 
     <a href = "#">Hosted on Netlify</a>  </footer>
+  </div>
 </body>
         
 </html>
