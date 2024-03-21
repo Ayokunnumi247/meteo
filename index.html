@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="src/style.css"/>
     <title>Meteo</title>
 </head>
 <body>
+  <div class="meteo">
     <header>
-        <form>
-            <input  type="search" class= "city"  placeholder="Enter a city..." required/>
-            <input  type="submit" class= "search"  value="Search" required/> 
+        <form id="form-input">
+            <input  type="search" 
+            class= "city"  
+            id="city-form"
+            placeholder="Enter a city..." required/>
+            <input  type="submit" value="Search" class= "search"   required/> 
         </form>
     </header>
     <main>
-        <h1>Paris</h1>
+        <h1 id="city" >Paris</h1>
         <p class="days">Monday 14:30, scattered clouds</br>
         Humidity: <span class="data">66%</span>, Wind: <span class="data">3.13Km/h</span>  </p>
           <div class="temperature">
@@ -26,6 +32,7 @@
     is <a href="#">opened-sourced on GitHub </a> and 
     <a href = "#">Hosted on Netlify</a>  </footer>
   </div>
+  <script src="src/script.js" ></script>
 </body>
         
 </html>

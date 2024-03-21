@@ -49,7 +49,7 @@ form .search {
   display: flex;
   justify-content: flex-end;
   position: relative;
-  top: -120px;*/
+  top: -120px;
 }
 .weather-temp {
   font-size: 89px;
@@ -62,7 +62,7 @@ form .search {
 }
 .degree {
   position: relative;
-  top: 13px;*/
+  top: 13px;
   font-size: 30px;
 }
 .data {
