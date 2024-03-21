@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css"/>
     <title>Meteo</title>
 </head>
@@ -24,7 +24,7 @@
         Humidity: <span class="data">66%</span>, Wind: <span class="data">3.13Km/h</span>  </p>
           <div class="temperature">
             <span class="cloud">🌥️</span>
-            <span class="weather-temp">12</span>
+            <span class="weather-temp" id="temperatureData">12</span>
             <span class="degree"> °C </span> </div>
     </main>
     <footer>The Project was coded by 
