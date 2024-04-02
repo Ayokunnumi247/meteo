@@ -6,7 +6,9 @@ function currentTemperature(response) {
   let windElement = document.querySelector("#wind");
   let dateElement = document.querySelector("#date-time");
   let date = new Date(response.data.time * 1000);
-  console.log(response.data.time);
+  let iconElement = document.querySelector("#icon");
+
+  iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="cloud"/>`;
   dateElement.innerHTML = weatherDate(date);
   humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
   conditionElement.innerHTML = response.data.condition.description;
