@@ -52,3 +52,27 @@ let formElement = document.querySelector("#form-input");
 formElement.addEventListener("submit", cityTempo);
 
 weatherApp("lisbon");
+
+function weatherForcast() {
+  let weekDays = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+  let forecastHtml = "";
+
+  weekDays.forEach(function (weekDays) {
+    forecastHtml =
+      forecastHtml +
+      `
+            <div class ="weather-col">
+            <div class="weekdays">${weekDays} </div> 
+                <div class="weather-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="icon"/></div>
+              <div class="row"><strong>20°</strong>
+                <span class="forecast">8°</span> 
+             </div> 
+             </div> 
+             </div>
+          </div>`;
+  });
+  let weatherForecast = document.querySelector("#forecast");
+  weatherForecast.innerHTML = forecastHtml;
+}
+
+weatherForcast();

@@ -8,9 +8,9 @@ input {
   border: none;
 }
 h1 {
-  padding-top: 30px;
-  font-size: 45px;
-  font-weight: 800;
+  padding-top: 20px;
+  font-size: 40px;
+  font-weight: 700;
 }
 footer {
   padding: 10px;
@@ -20,12 +20,10 @@ footer {
 a {
   color: rgb(165, 70, 242);
 }
-main {
-  height: 230px;
-}
+
 .meteo {
   display: block;
-  max-width: 580px;
+  max-width: 600px;
   margin: 40px auto;
   padding: 20px;
   border-radius: 10px;
@@ -35,7 +33,7 @@ main {
   box-shadow: 10px 33px 34px rgba(53, 68, 74, 0.2);
 }
 form .city {
-  width: 450px;
+  width: 470px;
   font-size: 15px;
 }
 form .search {
@@ -71,4 +69,25 @@ form .search {
 }
 .days {
   color: rgb(13 19 114);
+}
+.weather-forecast {
+  position: relative;
+  top: -65px;
+}
+.weekdays {
+  margin-left: 30px;
+}
+.forecast {
+  font-size: 15px;
+}
+strong {
+  margin: 15px;
+}
+.row {
+  color: #e41321;
+}
+.weather-forecast {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
