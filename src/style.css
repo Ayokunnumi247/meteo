@@ -49,6 +49,7 @@ form .search {
   position: relative;
   top: -120px;
 }
+
 .weather-temp {
   font-size: 89px;
   font-weight: 700;
@@ -68,7 +69,7 @@ form .search {
   color: #e41321;
 }
 .days {
-  color: rgb(13 19 114);
+  color: rgb(13 19 114 / 52%);
 }
 .weather-forecast {
   position: relative;
@@ -90,4 +91,7 @@ strong {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.weekdays {
+  color: rgba(0, 0, 0, 0.451);
 }

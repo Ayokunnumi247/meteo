@@ -15,6 +15,8 @@ function currentTemperature(response) {
   windElement.innerHTML = `${response.data.wind.speed}Km/h`;
   weather.innerHTML = Math.round(response.data.temperature.current);
   cityElement.innerHTML = response.data.city;
+
+  weatherKey(response.data.city);
 }
 function weatherDate(date) {
   let hours = date.getHours();
@@ -53,16 +55,22 @@ formElement.addEventListener("submit", cityTempo);
 
 weatherApp("lisbon");
 
-function weatherForcast() {
-  let weekDays = ["Wed", "Thu", "Fri", "Sat", "Sun"];
+function weatherKey(city) {
+  let Apikey = "8e4efa33a280aof6c33fe6a0t3ab54ec";
+  let ApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${Apikey}&units=metric`;
+  axios.get(ApiUrl).then(weatherForcast);
+}
+
+function weatherForcast(response) {
+  let day = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
-  weekDays.forEach(function (weekDays) {
+  day.forEach(function (day) {
     forecastHtml =
       forecastHtml +
       `
             <div class ="weather-col">
-            <div class="weekdays">${weekDays} </div> 
+            <div class="weekdays">${day} </div> 
                 <div class="weather-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="icon"/></div>
               <div class="row"><strong>20°</strong>
                 <span class="forecast">8°</span> 
@@ -74,5 +82,3 @@ function weatherForcast() {
   let weatherForecast = document.querySelector("#forecast");
   weatherForecast.innerHTML = forecastHtml;
 }
-
-weatherForcast();
