@@ -60,20 +60,31 @@ function weatherKey(city) {
   let ApiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${Apikey}&units=metric`;
   axios.get(ApiUrl).then(weatherForcast);
 }
+function formatDay(time) {
+  let date = new Date(time * 1000);
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[date.getDay()];
+}
 
 function weatherForcast(response) {
-  let day = ["Wed", "Thu", "Fri", "Sat", "Sun"];
   let forecastHtml = "";
 
-  day.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5)
+      forecastHtml =
+        forecastHtml +
+        `
             <div class ="weather-col">
-            <div class="weekdays">${day} </div> 
-                <div class="weather-icon"><img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/rain-day.png" alt="icon"/></div>
-              <div class="row"><strong>20°</strong>
-                <span class="forecast">8°</span> 
+            <div class="weekdays">${formatDay(day.time)} </div> 
+                <div ><img src="${
+                  day.condition.icon_url
+                }" class="weather-icon"/></div>
+              <div class="row"><strong>${Math.round(
+                day.temperature.maximum
+              )}°</strong>
+                <span class="forecast">${Math.round(
+                  day.temperature.minimum
+                )}°</span> 
              </div> 
              </div> 
              </div>
